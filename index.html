@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+	<head>
+		<meta charset="utf-8">
+		<title>baydaezh.com.ua - Туризм. Походы. Сплавы</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="БайдаЁж! - Туризм. Походы. Сплавы">
+		<meta name="author" content="Захарченко Сергей">
+		
+		<link rel="stylesheet" type="text/css" href="fonts/fontawesome-free-5.15.4-web/css/all.css"/>
+		<link rel="stylesheet" type="text/css" href="css/reset-v2x.css"/>
+		<link rel="stylesheet" type="text/css" href="css/variables.css"/>
+		<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+		<link rel="stylesheet" type="text/css" media="(max-width:1280px)" href="css/tablet.css" />
+		<link rel="stylesheet" type="text/css" media="(max-width:1023px)" href="css/small-tablet.css" />
+		<link rel="stylesheet" type="text/css" media="(max-width:575px) and (orientation:portrait)" href="css/mobile.css" />
+		<link rel="stylesheet" type="text/css" href="css/mobile-icons.css"/>
+		<link rel="stylesheet" type="text/css" href="css/social-media-icons.css"/>
+		
+		<script async src="script/main.js"></script>
+	</head>
+	
+	
+	<body>
+		<!--HEADER-->
+		<header>
+			<div class="flex-container" id="toolbar">
+				<a href="index.html"><img id="logo" src="images/logo(268x80px).png" alt="БайдаЁЖ"/></a>
+				<div class="flex-container">
+					<div id="phone-submenu" class="submenu-container">
+						<img id="phone-icon" src="images/phoneme_bilinear(38x38).gif" alt="phone" tabindex="0"/>
+						<div class=submenu-wrapper>
+							<a href="tel:+380632382105"><span title="Lifecell" class="mobo-lifecell-16">&nbsp;+38(063)238-21-05</span></a>
+							<a href="tel:+380990218740"><span title="Vodafone" class="mobo-vodafone-16">&nbsp;+38(099)021-87-40</span></a>
+							<a href="tel:+380984997977"><span title="Киевстар" class="mobo-kyivstar-16">&nbsp;+38(098)499-79-77</span></a>
+							<a href="viber://chat?number=%2B380990218740" target="_blank"><span title="Viber" class="social-media-icon fab fa-viber"></span>&nbsp;Viber</a>
+							<a href="https://t.me/baydaezh" target="_blank"><span title="Telegram" class="social-media-icon fab fa-telegram"></span>&nbsp;Telegram</a>
+						</div>
+					</div>
+					<!--desktop-menu-->
+					<div class="flex-container" id="desktop-menu">
+						<nav class="flex-container main-menu">
+							<a class="menu menu-selected" href="index.html">Главная</a>
+							<div id="tours-submenu" class="submenu-container">
+								<a class="menu" tabindex=0>Туры</a>
+								<div class=submenu-wrapper>
+									<a href="html/Donets.html">Северский Донец</a>
+									<a href="html/Oskol.html">Оскол</a>
+									<a href="html/Vorskla.html">Ворскла</a>
+									<a href="html/Orell.html">Орель</a>
+								</div>
+							</div>	
+							<a class="menu" href="html/sheduler.html">График</a>
+							<a class="menu" href="html/photos.html">Фото</a>
+							<a class="menu" href="html/feedback.html">Отзывы</a>
+							<a class="menu" href="html/blog.html">Блог</a>
+							<a class="menu" href="html/faq.html">FAQ</a>
+							<a class="menu" href="html/contacts.html">Контакты</a>
+						</nav>
+						<a class="button menu-button" href="#tour-request">Хочу в поход!</a>
+						<div class="submenu-container">
+							<div id="language-selector" tabindex=0>Рус</div>
+							<div class=submenu-wrapper>
+								<a href="">Рус</a>
+								<a href="">Укр</a>
+							</div>
+						</div>
+					</div>
+					<!--mobile-menu-->
+					<div id="mobile-menu">
+						<input id="mobile-menu-checkbox" type="checkbox" tabindex="0"/>
+						<label class="mobile-menu-hamburger" for="mobile-menu-checkbox" tabindex=0><span></span><span></span><span></span></label>
+						<div class="mobile-menu-wrapper">
+							<a class="mobile-menu-item menu-selected" href="index.html">Главная</a>
+							<input id="tours-submenu-chekbox" type="checkbox"/>
+							<label for="tours-submenu-chekbox" class="mobile-menu-item" tabindex="0">Туры <span class="submenu-arrow fas fa-caret-down"></span></label>
+								<a class="mobile-submenu-item mobile-submenu-tour" href="html/Donets.html">Северский Донец</a>
+								<a class="mobile-submenu-item mobile-submenu-tour" href="html/Oskol.html">Оскол</a>
+								<a class="mobile-submenu-item mobile-submenu-tour" href="html/Vorskla.html">Ворскла</a>
+								<a class="mobile-submenu-item mobile-submenu-tour" href="html/Orell.html">Орель</a>
+							<a class="mobile-menu-item" href="html/sheduler.html">График</a>
+							<a class="mobile-menu-item" href="html/photos.html">Фото</a>
+							<a class="mobile-menu-item" href="html/feedback.html">Отзывы</a>
+							<a class="mobile-menu-item" href="html/blog.html">Блог</a>
+							<a class="mobile-menu-item" href="html/faq.html">FAQ</a>
+							<a class="mobile-menu-item" href="html/contacts.html">Контакты</a>
+							<input id="language-selector-chekbox" type="checkbox"/>
+							<label for="language-selector-chekbox" id="language-selector-menu-item" class="mobile-menu-item" tabindex=0>Рус <span class="submenu-arrow fas fa-caret-down"></span></label>
+								<a class="mobile-submenu-item mobile-submenu-language" href="">Рус</a>
+								<a class="mobile-submenu-item mobile-submenu-language" href="">Укр</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		
+		<!--MAIN BLOCK-->
+		<main>
+			<article>
+				<!--Video block-->
+				<div class="video-container">
+					<!--<video autoplay muted loop id="intro-video" poster="video/заставка_сайта_(crop)(2160)_5_preview.jpg">
+						<source src="video/site-video-intro(1920x500)_1.mp4" type="video/mp4">
+					</video>-->
+					<video autoplay muted loop id="intro-video" poster="video/заставка_сайта_(crop)(2160)_5_preview.jpg">
+						<source src="video/Заставка_исходный_фрагмент(circled).mp4" type="video/mp4">
+					</video>
+					<img id="intro-img" src="images/DJI_6(700x420).jpg" alt=""/>
+					<div class="text-white-shadow first-line">Сезон 2022</div>
+					<div class="text-white-shadow second-line">Байдарочные походы по&nbsp;рекам Украины</div>
+				</div>
+				
+				<!--Promo block-->
+				<div class="white-background-frame">
+					<h1>Туры на байдарках из&nbsp;Харькова</h1>
+					<div class="header-underline"></div>
+					<h3>Время приключений определяешь ты!<br>Забайдаёжь свой отдых!</h3>
+					<div id="promo-container">
+						<input id="detail-checkbtn" type="checkbox"/>
+						<div class="promo-text">
+							<p>БайдаЁЖ – в&nbsp;первую очередь, это команда, команда настоящих друзей! Мы увлекаемся туризмом, любим сплавы, походы и восхождения. Поэтому готовы искренне поделиться с&nbsp;вами тем, что по&nbsp;душе нам самим!</p>
+							<p>Планируя поход самостоятельно, нужно учитывать много мелочей. Это часто непросто. Поэтому в&nbsp;походе с&nbsp;нами вам не придется думать ни&nbsp;о&nbsp;чем, кроме того, как получать удовольствие от&nbsp;путешествия. Мы&nbsp;о&nbsp;вас позаботимся&nbsp;– предоставим все необходимое снаряжение, вкусно и&nbsp;сытно накормим, научим управлять байдаркой и&nbsp;поможем окунуться в&nbsp;прелести походной жизни!</p>
+							<p>Мы приглашаем новичков и&nbsp;любителей, участников и&nbsp;корпоративные группы от&nbsp;25&nbsp;человек&nbsp;– всех, кто хочет отправиться на&nbsp;байдарочный сплав и&nbsp;по&nbsp;достоинству оценить все преимущества водного туризма!</p>
+							<div class="gradient"></div>
+						</div>
+						<label for="detail-checkbtn" tabindex=0>Подробнее</label>
+					</div>
+				</div>
+				
+				<!--Section 1 - Tour tickets-->
+				<section>
+					<div class="pattern-background-frame">
+						<h2>Байдарочные походы</h2>
+						<div class="header-underline"></div>
+						<div class="tour-ticket-container">
+							<div class="tour-ticket">
+								<img class="tour-ticket-img" src="images/Донец_ticket.jpg" alt="Северский Донец"/>
+								<h4>Сплав на байдарках по Северскому Донцу</h4>
+								<div class="header-underline"></div>
+								<p>В зависимости от&nbsp;маршрута здесь можно увидеть как Змиевские кручи, так и&nbsp;меловые горы, «Зеленый коридор» и&nbsp;даже шиверу со&nbsp;стремительным течением. Если хотите отдохнуть на&nbsp;природе недалеко от&nbsp;города, эта река&nbsp;- то, что вам нужно!</p>
+								<a href="html/tours.html">Подробнее</a>
+							</div>
+							<div class="tour-ticket">
+								<img class="tour-ticket-img" src="images/Оскол_ticket.jpg" alt="Оскол"/>
+								<h4>Сплав на байдарках <br>по Осколу</h4>
+								<div class="header-underline"></div>
+								<p>Белоснежные меловые горы, Двуречанский национальный парк, множество птиц, непаханые луга, безлюдные пляжи, мало населенных пунктов на&nbsp;маршруте и&nbsp;отличная рыбалка! Эта река для тех, кто ищет единения с&nbsp;природой!</p>
+								<a href="html/tours.html">Подробнее</a>
+							</div>
+							<div class="tour-ticket">
+								<img class="tour-ticket-img" src="images/Ворскла_ticket.jpg" alt="Ворскла"/>
+								<h4>Сплав на байдарках <br>по Ворскле</h4>
+								<div class="header-underline"></div>
+								<p>Кристально чистая вода, огромные песчаных пляжи на&nbsp;всем маршруте, красивые зеленые коридоры из&nbsp;низко опущенных веток, множество поворотов и&nbsp;завалов. Эта река для тех, кто жаждет контрастов и&nbsp;ищет ярких эмоций!</p>
+								<a href="html/tours.html">Подробнее</a>
+							</div>
+							<div class="tour-ticket">
+								<img class="tour-ticket-img" src="images/Орель_ticket.jpg" alt="Орель"/>
+								<h4>Сплав на байдарках <br>по Орели</h4>
+								<div class="header-underline"></div>
+								<p>Заросли камыша, чередование узких проток с&nbsp;быстрым течением и&nbsp;широких разливов со&nbsp;спокойной водой; множество рукавов и&nbsp;разветвлений основного русла. Эта река&nbsp;– идеальна для тех, кто хочет окунуться в&nbsp;атмосферу настоящих приключений!</p>
+								<a href="html/tours.html">Подробнее</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				
+				<!--<section 2 - tour request>-->
+				<section>
+					<div id="tour-request" class="tour-request-frame">
+						<h2 class="text-white-shadow">Оставить заявку на тур</h2>
+						<form id="tour-request-form" method="post" action="index.html">
+							<input id="name-field" type="text" name="Name-Surname" placeholder="Имя и Фамилия *" required/>
+							<input id="phone-field" type="tel" name="Phone" placeholder="+380(XX)XXX-XX-XX" required/>
+							<select id="tour-field" name="Tour">
+								<option value="Тур по Северскому Донцу">Тур по Северскому Донцу</option>
+								<option value="Тур по Осколу">Тур по Осколу</option>
+								<option value="Тур по Ворскле">Тур по Ворскле</option>
+								<option value="Тур по Орели">Тур по Орели</option>
+							</select>
+							<input id="tour-request-btn" type="submit" value="Записаться"/>
+						</form>
+					</div>
+				</section>
+				
+				<!--<section 3 - feedback samples>-->
+				<section>
+					<div class="pattern-background-frame">
+						<div id="feedback-samples-container">
+							<a class="prev-feedback-btn" onclick="listFeedback(-1)">&#10094;</a>
+							<a class="next-feedback-btn" onclick="listFeedback(1)">&#10095;</a>
+							<!--feedback 1-->
+							<div class="feedback-sample fade">
+								<div class="feedback-photo-wrapper">
+									<img class="feedback-photo" src="images/feedback1-150x150.jpg" alt=""/>
+								</div>
+								<p class="feedback-text">Спасибо за&nbsp;прекрасный отдых.<br>
+								Четкая организация для участников. Все от&nbsp;инструктажа до&nbsp;вечерних посиделок было на&nbsp;хорошем уровне.<br>
+								Вкусная еда, которой было более чем достаточно, несмотря на&nbsp;повышенную физ активность.<br>
+								Оборудование (весла, байды, палатки) в&nbsp;хорошем состоянии.<br>
+								Дружный коллектив и&nbsp;атмосфера отдыха.<br>
+								Было приятно, буду рекомендовать знакомым.</p>
+								<p class="caption-text"> <span class="caption-name">Иванов Иван</span><span class="caption-route">Ахтырка-Лутище</span></p>
+							</div>
+							<!--feedback 2-->
+							<div class="feedback-sample fade">
+								<div class="feedback-photo-wrapper">
+									<img class="feedback-photo" src="images/103737581_2352094678425012_255286926247566131_n.jpg" alt=""/>
+								</div>
+								<p class="feedback-text">Наш первый семейный сплав был прекрасным! Если честно признаться, то накануне я&nbsp;очень волновалась о&nbsp;том, как же все пройдет, но&nbsp;потом все таки решила отпустить ситуацию и&nbsp;наслаждаться))) Два денечка просто пролетели. Вокруг красота и&nbsp;организаторы постарались, чтобы было максимально комфортно. Алеся гребла, восходила на&nbsp;Казачью Гору, плавала, лопала кулеш и&nbsp;прочую походную еду, пела песни, бегала по&nbsp;полям и&nbsp;любовалась пейзажами, растениями, птицами, насекомыми и зверями))) Какой итог? Счастливые и&nbsp;покусанные комарами (этих дикарей ничего не&nbsp;берет) мы теперь хотим в&nbsp;трехдневный сплав!)))</p>
+								<p class="caption-text"> <span class="caption-name">Наливайко Настя</span><span class="caption-route">Гинеевка-Черкасский Бишкин</span></p>
+							</div>
+							<!--feedback 3-->
+							<div class="feedback-sample fade">
+								<div class="feedback-photo-wrapper">
+									<img class="feedback-photo" src="images/23659677_546531242366345_3430948882934362708_n.jpg" alt=""/>
+								</div>
+								<p class="feedback-text">Я&nbsp;с&nbsp;утра на&nbsp;работе, но&nbsp;улыбаюсь воспоминаниям о&nbsp;походе. Это мое событие силы! Ещё раз благодарю вас с&nbsp;Натальей и&nbsp;ребятами.</p>
+								<p class="caption-text"> <span class="caption-name">Кузьменко Наталия</span><span class="caption-route">Псел</span></p>
+							</div>
+						</div>
+						
+						<div class="slider-dots-container">
+							<span class="slider-dot" onclick="currentFeedback(1)"></span>
+							<span class="slider-dot" onclick="currentFeedback(2)"></span>
+							<span class="slider-dot" onclick="currentFeedback(3)"></span>
+							<br>
+							<a class="button" href="html/feedback.html">Все отзывы</a>
+						</div>
+					</div>
+				</section>
+			</article>
+		</main>
+		
+		<!--FOOTER-->
+		<footer class="footer-container">
+			<div class="flex-container">
+				<div class="footer-contacts">
+					<p><span class="bold">Контактная информация:</span></p>
+					<p>Украина, Харьков<br>
+						e-mail: <a href="mailto:baydaezh.pokhody@gmail.com">baydaezh.pokhody@gmail.com</a>
+					</p>
+					<p>
+						<a href="tel:+380632382105">+38 (063) 238-21-05</a><br>
+						<a href="tel:+380990218740">+38 (099) 021-87-40</a><br>
+						<a href="tel:+380984997977">+38 (098) 499-79-77</a>
+					</p>
+					<p>Ежедневно с 09:00 до 21:00</p>
+				</div>
+				<div class="footer-menu">
+					<nav>
+						<p><span class="bold">Меню:</span></p>
+						<p>
+							<a href="index.html">Главная</a><br>
+							<a href="html/sheduler.html">График</a><br>
+							<a href="html/photos.html">Фото</a><br>
+							<a href="html/feedback.html">Отзывы</a><br>
+							<a href="html/blog.html">Блог</a><br>
+							<a href="html/faq.html">FAQ</a><br>
+							<a href="html/contacts.html">Контакты</a>
+						</p>
+					</nav>
+				</div>
+				<div class="footer-tours">
+					<nav>
+						<p><span class="bold">На байдарках:</span></p>
+						<p>
+							<a href="html/Donets.html">Тур по Северскому Донцу</a><br>
+							<a href="html/Oskol.html">Тур по Осколу</a><br>
+							<a href="html/Vorskla.html">Тур по Ворскле</a><br>
+							<a href="html/Orell.html">Тур по Орели</a>
+						</p>
+						<p>
+							<a class="social-media-buttons fab fa-facebook-f" href="https://www.facebook.com/baydaezh" target="_blank"></a>
+							<a class="social-media-buttons fab fa-instagram" href="https://www.instagram.com/accounts/login/" target="_blank"></a>
+							<a class="social-media-buttons fab fa-youtube" href="https://www.youtube.com/channel/UCK3hUXOARz_u09vMER5YKkA" target="_blank"></a>
+							<a class="social-media-buttons fab fa-viber" href="viber://chat?number=%2B380990218740" target="_blank"></a>
+							<a class="social-media-buttons fab fa-telegram-plane" href="https://t.me/baydaezh" target="_blank"></a>
+						</p>
+					</nav>
+				</div>
+			</div>
+			<div class="footer-copyrights">
+				<p>© 2016-2022, БайдаЁЖ, все права защищены.<br>
+				<a href="">Пользовательское соглашение</a></p>
+			</div>
+		</footer>
+	</body>
+</html>

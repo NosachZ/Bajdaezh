@@ -1,0 +1,85 @@
+/*//////////////////////////
+Tablet styles (max-width:1280px)
+//////////////////////////*/
+
+
+/*//////////////////////////
+Menu styles
+//////////////////////////*/
+#toolbar {
+	/*position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;*/
+	height: 80px;
+	/*background-color: white;
+	box-shadow: 0px 0px 3px 0px #888;
+	justify-content: space-between;*/
+	padding: 0px 20px;
+	/*flex-wrap: nowrap;
+	z-index:10;*/
+	max-width: 1280px;
+	/*margin: auto;*/
+}
+
+#logo {
+	height:65px;
+}
+
+#phone-icon {
+	/*margin-right:8px;*/
+	height: 32px;
+}
+
+.main-menu a.menu, .main-menu p.menu {
+	/*display: block;
+	position: relative;
+	color: black;*/
+	letter-spacing: 1px;
+	font-size: 12px;
+	/*text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;*/
+	margin: 0px 8px;
+	padding: 2px 0px;
+	/*border-bottom: 3px solid transparent;
+	border-top: 3px solid transparent;*/
+}
+
+#language-selector {
+	/*color: #aaa;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;*/
+	font-size: 10px;
+	/*font-weight: bold;
+	margin: 0px 0px 0px 8px;
+	padding: 12px 0px;*/
+}
+
+.menu-button{
+	letter-spacing: 1px;
+	font-size: 12px;
+	margin: 0px 8px;
+	padding: 2px 14px;
+	/*border-bottom: 3px solid transparent;
+	border-top: 3px solid transparent;*/
+}
+
+
+/*//////////////////////////
+Main frame
+//////////////////////////*/
+
+main{
+	margin-top:80px;
+}
+
+/*//////////////////////////
+Tour-request block
+//////////////////////////*/
+
+/*#tour-request-form input{
+	display: block;
+	width: 100%;
+}*/
