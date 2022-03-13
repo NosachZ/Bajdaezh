@@ -2,62 +2,36 @@
 Mobile portreit styles (min-width:320 and max-width:575px)
 //////////////////////////*/
 
-#toolbar {
+.toolbar {
 	height: 60px;
 	padding: 0 0 0 15px;
 	max-width: 1280px;
 }
 
-#logo {
+.logo {
 	height:50px;
 }
 
-label.mobile-menu-hamburger {
-	margin-left: 20px;
-}
-
-#phone-icon {
-	width: 32px;
+.phone-icon {
 	height: 32px;
 	margin: 0;
 }
 
-.submenu-wrapper {
-	right: 0;
-	top: 49px;
+.phone-menu > li {
+	height: 60px;
+	padding-top: 14px;
 }
 
-.mobile-menu-wrapper {
-	display: none;
-	position: fixed;
+.phone-menu .submenu {
+	right: -90px;
+	top: 57px;
+}
+
+.responsive-menu {
+	left: 0;
 	right: 0px;
-	left: 0px;
-	border-top: 3px solid var(--main-color);
-	border-bottom: 1px solid var(--border-gray);
-	top: 60px;
-	background-color: white;
+	top: 57px;
 }
-
-.mobile-menu-wrapper .mobile-menu-item {
-	text-align: center;
-}
-
-.mobile-menu-wrapper .mobile-submenu-item {
-	padding: 8px 42px 8px 42px;
-	/*font-size: 14px;*/
-	text-align: center;
-	/*color: var(--text-gray);
-	text-decoration: none;
-	font-weight: bold;
-	text-transform: none;
-	white-space: nowrap;*/
-}
-
-
-
-
-
-
 
 
 
@@ -78,11 +52,11 @@ main{
 	display: block;*/
 	height: auto;
 }
-#intro-video{
+.intro-video{
 	display: none;
 }
 
-#intro-img {
+.intro-img {
 	display: block;
 	width: 100%;
 }

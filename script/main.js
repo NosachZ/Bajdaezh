@@ -1,3 +1,14 @@
+/*Hamburger menu*/
+
+function hamburgerMenuClick () {
+  var hamburgerMenu = document.querySelector("div.mobile-menu-hamburger");
+  var responsiveMenu = document.querySelector("div.responsive-menu");
+  hamburgerMenu.classList.toggle("visible");
+  responsiveMenu.classList.toggle("visible");
+  document.activeElement.blur();
+}
+
+/*Slider*/
 var feedbackIndex = 1;
 showFeedback(feedbackIndex);
 

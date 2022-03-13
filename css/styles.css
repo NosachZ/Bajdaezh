@@ -157,7 +157,7 @@ h4{
 Header styles
 //////////////////////////*/
 
-#toolbar {
+.toolbar {
 	position: fixed;
     top: 0;
     left: 0;
@@ -173,62 +173,167 @@ Header styles
 	margin: auto;
 }
 
-#phone-icon {
+.phone-icon {
 	margin-right:8px;
 }
 
+/*/////hamburger menu/////*/
+div.mobile-menu-hamburger {
+	display: none;
+	align-items: center;
+	justify-content: center;
+	width: 60px;
+	height: 60px;
+	margin-left: 30px;
+	cursor: pointer;
+	position: relative;
+}
+
+div.mobile-menu-hamburger > span {
+	display: block;
+	width: 50%;
+	height: 4px;
+	left: 15px;
+	background-color: var(--main-color);
+	position: absolute;
+	opacity: 1;
+	transition: .35s ease-in-out;
+}
+
+div.mobile-menu-hamburger > span:nth-child(1) {
+	top: 20px;
+	
+}
+
+div.mobile-menu-hamburger > span:nth-child(2) {
+	top: 28px;
+}
+
+div.mobile-menu-hamburger > span:nth-child(3) {
+	top: 36px;
+}
+
+div.mobile-menu-hamburger.visible > span:nth-child(1) {
+	transform: rotate(45deg);
+	top: 28px;
+}
+
+div.mobile-menu-hamburger.visible > span:nth-child(2) {
+	opacity: 0;
+	width: 0;
+	left: 30px;
+}
+
+div.mobile-menu-hamburger.visible > span:nth-child(3) {
+	transform: rotate(-45deg);
+	top: 28px;
+}
 
 /*/////desktop menu styles/////*/
+.header-menu,
+.phone-menu,
+.responsive-menu,
+.main-menu,
+.language-selector {
+	display: flex;
+	align-items:center;
+	flex-flow: row nowrap;
+}
 
-.main-menu a.menu,
-.main-menu p.menu {
+.phone-menu > li,
+.main-menu > li,
+.main-menu > li > a,
+.language-selector,
+.language-selector > li,
+.language-selector > li > a {
 	display: block;
+	height: 38px;
 	position: relative;
+}
+
+.main-menu > li > a {
 	color: black;
-	letter-spacing: 2px;
+	letter-spacing: 1.5px;
 	font-size: 14px;
 	text-transform: uppercase;
 	text-decoration: none;
 	text-align: center;
 	margin: 0px 8px;
-	padding: 3px 0px;
-	border-bottom: 3px solid transparent;
-	border-top: 3px solid transparent;
+	padding: 5px 0px;
 }
 
-.main-menu a.menu-selected,
-.main-menu a.menu:hover,
-.main-menu a.menu:focus {
-	color: var(--main-color);
-	border-bottom: 3px solid var(--main-color);
-}
-
-.main-menu a.button,
-.main-menu a.button:hover{
-	color: white;
-}
-
-.submenu-container {
+.main-menu > li > a::after {
+	content: "";
 	display: block;
-	position: relative;
+	position: absolute;
+	width: 0;
+	height: 3px;
+	top: 35px;
+	left: 50%;
+	background-color: var(--main-color);
+	transition: width .25s, left .25s;
+}
+.main-menu > li > a.menu-selected::after,
+.main-menu > li > a:hover::after,
+.main-menu > li > a:focus::after {
+	width: 100%;
+	left: 0;
+}
+.main-menu > li > a.menu-selected,
+.main-menu > li > a:hover,
+.main-menu > li > a:focus {
+	color: var(--main-color);
 }
 
-.submenu-wrapper {
+.phone-menu .submenu,
+.main-menu .submenu,
+.language-selector .submenu {
 	background-color: white;
 	position: absolute;
 	border-top: 3px solid var(--main-color);
 	box-shadow: 0px 0px 6px 0px #ddd;
-	z-index:1;
-	/*display: none;*/ /*1 variant*/
+	/*1 variant*/
+	top: 35px;
+	display: none;
 	
-	display: block;  /*2 variant*/
+	/*2 variant*/
+	/*display: block;  
 	transform-origin: 0 0;
 	opacity: 0.5;
 	transform: translate(0px, -3px) scaleY(0);
-	transition: opacity 0.75s, transform 0.75s;
+	transition: opacity 0.5s, transform 0.5s;*/
 }
 
-.submenu-wrapper a {
+.phone-menu > li:hover > .submenu,
+.phone-menu > li:focus > .submenu,
+.phone-menu > li:focus-within > .submenu {
+	/*1 variant*/
+	display: block;
+	
+	/*2 variant*/
+	/*transform: translate(0px, -3px) scaleY(1);
+	opacity: 1;*/
+}
+
+@media (min-width:1024px){
+	.main-menu > li:hover > .submenu,
+	.main-menu > li:focus > .submenu,
+	.main-menu > li:focus-within > .submenu,
+	.language-selector > li:hover > .submenu,
+	.language-selector > li:focus > .submenu,
+	.language-selector > li:focus-within > .submenu {
+		/*1 variant*/
+		display: block;
+	
+		/*2 variant*/
+		/*transform: translate(0px, -3px) scaleY(1);
+		opacity: 1;*/
+	}
+}
+
+.phone-menu .submenu > li > a,
+.main-menu .submenu > li > a,
+.language-selector .submenu > li > a {
 	display: block;
 	padding: 8px;
 	text-align: left;
@@ -237,14 +342,27 @@ Header styles
 	font-weight: normal;
 	white-space: nowrap;
 }
-
-.submenu-wrapper a:hover,
-.submenu-wrapper a:focus {
+.phone-menu .submenu > li > a:hover,
+.phone-menu .submenu > li > a:focus,
+.main-menu .submenu > li > a:hover,
+.main-menu .submenu > li > a:focus,
+.language-selector .submenu > li > a:hover,
+.language-selector .submenu > li > a:focus {
 	background-color: var(--fill-gray);
 }
 
+a.button.menu-button,
+a.button.menu-button:hover{
+	display: block;
+	letter-spacing: 1.5px;
+	font-size: 13px;
+	margin: 0px 8px;
+	padding: 7px 16px;
+	height: 38px;
+	color: white;
+}
 
-#language-selector {
+.language-selector > li > a {
 	color: #aaa;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -252,35 +370,9 @@ Header styles
 	font-size: 12px;
 	font-weight: bold;
 	margin: 0px 0px 0px 8px;
-	padding: 12px 0px;
+	padding: 8px 0px;
+	cursor: pointer;
 }
-
-
-.submenu-container:hover .submenu-wrapper, 
-.submenu-container a:focus~.submenu-wrapper,
-.submenu-container:focus-within .submenu-wrapper {
-	/*display: block;*/ /*1 variant*/
-	
-	transform: translate(0px, -3px) scaleY(1); /*2 variant*/
-	opacity: 1;
-}
-
-
-.menu-button {
-	letter-spacing: 2px;
-	font-size: 14px;
-	margin: 0px 8px;
-	padding: 3px 16px;
-	border-bottom: 3px solid transparent;
-	border-top: 3px solid transparent;
-}
-
-/*/////mobile menu styles/////*/
-
-#mobile-menu {
-	display: none;
-}
-
 
 /*//////////////////////////
 Main frame
@@ -298,34 +390,36 @@ Video block
 .video-container{
 	height:405px;
 	overflow:hidden;
-	display:flex;
-	flex-direction: column;
-	align-items:center;
-	justify-content: flex-end;
 	position: relative;
+	margin: auto;
 }
-#intro-video{
-	min-width:1920px;
-	transform: translate(0px, 20px);
+.intro-video{
+	/*width:1920px;*/
+	height: 500px;
+	object-fit: none;
+	object-position: center -75px;
 }
 
-#intro-img {
+.intro-img {
 	display: none;
 }
 
-.video-container div {
+.video-container .first-line,
+.video-container .second-line {
 	position:absolute;
 	text-align: center;
 	font-weight: normal;
 	padding: 0 20px;
+	width: 100%;
+	margin: auto;
 }
 
-.video-container div.first-line {
+.video-container .first-line {
 	font-size: 32px;
 	top: 20px;
 }
 
-.video-container div.second-line {
+.video-container .second-line {
 	text-transform: uppercase;
 	font-size: 30px;
 	top: 80px;

@@ -7,7 +7,8 @@
 		<meta name="description" content="БайдаЁж! - Туризм. Походы. Сплавы">
 		<meta name="author" content="Захарченко Сергей">
 		
-		<link rel="stylesheet" type="text/css" href="fonts/fontawesome-free-5.15.4-web/css/all.css"/>
+		<!--<link rel="stylesheet" type="text/css" href="fonts/fontawesome-free-5.15.4-web/css/all.css"/>-->
+		<script src="https://kit.fontawesome.com/0eb8da3769.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" type="text/css" href="css/reset-v2x.css"/>
 		<link rel="stylesheet" type="text/css" href="css/variables.css"/>
 		<link rel="stylesheet" type="text/css" href="css/styles.css"/>
@@ -24,72 +25,60 @@
 	<body>
 		<!--HEADER-->
 		<header>
-			<div class="flex-container" id="toolbar">
-				<a href="index.html"><img id="logo" src="images/logo(268x80px).png" alt="БайдаЁЖ"/></a>
-				<div class="flex-container">
-					<div id="phone-submenu" class="submenu-container">
-						<img id="phone-icon" src="images/phoneme_bilinear(38x38).gif" alt="phone" tabindex="0"/>
-						<div class=submenu-wrapper>
-							<a href="tel:+380632382105"><span title="Lifecell" class="mobo-lifecell-16">&nbsp;+38(063)238-21-05</span></a>
-							<a href="tel:+380990218740"><span title="Vodafone" class="mobo-vodafone-16">&nbsp;+38(099)021-87-40</span></a>
-							<a href="tel:+380984997977"><span title="Киевстар" class="mobo-kyivstar-16">&nbsp;+38(098)499-79-77</span></a>
-							<a href="viber://chat?number=%2B380990218740" target="_blank"><span title="Viber" class="social-media-icon fab fa-viber"></span>&nbsp;Viber</a>
-							<a href="https://t.me/baydaezh" target="_blank"><span title="Telegram" class="social-media-icon fab fa-telegram"></span>&nbsp;Telegram</a>
+			<div class="flex-container toolbar">
+				<a href="index.html"><img class="logo" src="images/logo(268x80px).webp" alt="БайдаЁЖ"/></a>
+				
+				<div class="header-menu">
+					<ul class="phone-menu">
+						<li><img class="phone-icon" src="images/phoneme(38x38).gif" alt="phone" tabindex="0"/>
+							<ul class="submenu">
+								<li><a href="tel:+380632382105"><span title="Lifecell" class="mobo-lifecell-16">&nbsp;+38(063)238-21-05</span></a></li>
+								<li><a href="tel:+380990218740"><span title="Vodafone" class="mobo-vodafone-16">&nbsp;+38(099)021-87-40</span></a></li>
+								<li><a href="tel:+380984997977"><span title="Киевстар" class="mobo-kyivstar-16">&nbsp;+38(098)499-79-77</span></a></li>
+								<li><a href="viber://chat?number=%2B380990218740" target="_blank"><span title="Viber" class="social-media-icon fab fa-viber"></span>&nbsp;Viber</a></li>
+								<li><a href="https://t.me/baydaezh" target="_blank"><span title="Telegram" class="social-media-icon fab fa-telegram"></span>&nbsp;Telegram</a></li>
+							</ul>
+						</li>
+					</ul>
+
+					<div class="responsive-menu-container" tabindex="0">
+						<div class="mobile-menu-hamburger" onclick="hamburgerMenuClick()"><span></span><span></span><span></span></div>
+
+						<div class="responsive-menu">
+							<nav>
+								<ul class="main-menu">
+									<li><a class="menu-selected" href="index.html">Главная</a></li>
+									<li><a href="javascript:void(0);">Туры <span class="submenu-arrow fas fa-caret-down"></span></a>
+										<ul class="submenu">
+											<li><a href="html/Donets.html">Северский Донец</a></li>
+											<li><a href="html/Oskol.html">Оскол</a></li>
+											<li><a href="html/Vorskla.html">Ворскла</a></li>
+											<li><a href="html/Orell.html">Орель</a></li>
+										</ul>
+									</li>	
+									<li><a href="html/sheduler.html">График</a></li>
+									<li><a href="html/photos.html">Фото</a></li>
+									<li><a href="html/feedback.html">Отзывы</a></li>
+									<li><a href="html/blog.html">Блог</a></li>
+									<li><a href="html/faq.html">FAQ</a></li>
+									<li><a href="html/contacts.html">Контакты</a></li>
+								</ul>
+							</nav>
+							<a class="button menu-button" href="#tour-request">Хочу в поход!</a>
+							<ul class="language-selector">
+								<li><a href="javascript:void(0);">Рус</a>
+									<ul class="submenu">
+										<li><a href="">Рус</a></li>
+										<li><a href="">Укр</a></li>
+									</ul>
+								</li>
+							</ul>
 						</div>
 					</div>
-					<!--desktop-menu-->
-					<div class="flex-container" id="desktop-menu">
-						<nav class="flex-container main-menu">
-							<a class="menu menu-selected" href="index.html">Главная</a>
-							<div id="tours-submenu" class="submenu-container">
-								<a class="menu" tabindex=0>Туры</a>
-								<div class=submenu-wrapper>
-									<a href="html/Donets.html">Северский Донец</a>
-									<a href="html/Oskol.html">Оскол</a>
-									<a href="html/Vorskla.html">Ворскла</a>
-									<a href="html/Orell.html">Орель</a>
-								</div>
-							</div>	
-							<a class="menu" href="html/sheduler.html">График</a>
-							<a class="menu" href="html/photos.html">Фото</a>
-							<a class="menu" href="html/feedback.html">Отзывы</a>
-							<a class="menu" href="html/blog.html">Блог</a>
-							<a class="menu" href="html/faq.html">FAQ</a>
-							<a class="menu" href="html/contacts.html">Контакты</a>
-						</nav>
-						<a class="button menu-button" href="#tour-request">Хочу в поход!</a>
-						<div class="submenu-container">
-							<div id="language-selector" tabindex=0>Рус</div>
-							<div class=submenu-wrapper>
-								<a href="">Рус</a>
-								<a href="">Укр</a>
-							</div>
-						</div>
-					</div>
-					<!--mobile-menu-->
-					<div id="mobile-menu">
-						<input id="mobile-menu-checkbox" type="checkbox" tabindex="0"/>
-						<label class="mobile-menu-hamburger" for="mobile-menu-checkbox" tabindex=0><span></span><span></span><span></span></label>
-						<div class="mobile-menu-wrapper">
-							<a class="mobile-menu-item menu-selected" href="index.html">Главная</a>
-							<input id="tours-submenu-chekbox" type="checkbox"/>
-							<label for="tours-submenu-chekbox" class="mobile-menu-item" tabindex="0">Туры <span class="submenu-arrow fas fa-caret-down"></span></label>
-								<a class="mobile-submenu-item mobile-submenu-tour" href="html/Donets.html">Северский Донец</a>
-								<a class="mobile-submenu-item mobile-submenu-tour" href="html/Oskol.html">Оскол</a>
-								<a class="mobile-submenu-item mobile-submenu-tour" href="html/Vorskla.html">Ворскла</a>
-								<a class="mobile-submenu-item mobile-submenu-tour" href="html/Orell.html">Орель</a>
-							<a class="mobile-menu-item" href="html/sheduler.html">График</a>
-							<a class="mobile-menu-item" href="html/photos.html">Фото</a>
-							<a class="mobile-menu-item" href="html/feedback.html">Отзывы</a>
-							<a class="mobile-menu-item" href="html/blog.html">Блог</a>
-							<a class="mobile-menu-item" href="html/faq.html">FAQ</a>
-							<a class="mobile-menu-item" href="html/contacts.html">Контакты</a>
-							<input id="language-selector-chekbox" type="checkbox"/>
-							<label for="language-selector-chekbox" id="language-selector-menu-item" class="mobile-menu-item" tabindex=0>Рус <span class="submenu-arrow fas fa-caret-down"></span></label>
-								<a class="mobile-submenu-item mobile-submenu-language" href="">Рус</a>
-								<a class="mobile-submenu-item mobile-submenu-language" href="">Укр</a>
-						</div>
-					</div>
+					
+					
+					
+					
 				</div>
 			</div>
 		</header>
@@ -99,13 +88,10 @@
 			<article>
 				<!--Video block-->
 				<div class="video-container">
-					<!--<video autoplay muted loop id="intro-video" poster="video/заставка_сайта_(crop)(2160)_5_preview.jpg">
-						<source src="video/site-video-intro(1920x500)_1.mp4" type="video/mp4">
-					</video>-->
-					<video autoplay muted loop id="intro-video" poster="video/заставка_сайта_(crop)(2160)_5_preview.jpg">
-						<source src="video/Заставка_исходный фрагмент_(h.264).mp4" type="video/mp4">
+					<video autoplay muted loop class="intro-video" poster="video/заставка_сайта_(crop)(2160)_5_preview.jpg">
+						<source src="video/site-video-intro(1920x500)_(h.264).mp4" type="video/mp4">
 					</video>
-					<img id="intro-img" src="images/DJI_6(700x420).jpg" alt=""/>
+					<img class="intro-img" src="images/home-mob(700x420).webp" alt=""/>
 					<div class="text-white-shadow first-line">Сезон 2022</div>
 					<div class="text-white-shadow second-line">Байдарочные походы по&nbsp;рекам Украины</div>
 				</div>

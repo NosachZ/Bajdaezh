@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+	<head>
+		<meta charset="utf-8">
+		<title>test</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		
+		<link rel="stylesheet" type="text/css" href="css/reset-v2x.css"/>
+		<link rel="stylesheet" type="text/css" href="css/variables.css"/>
+		<!--<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+		<link rel="stylesheet" type="text/css" media="(max-width:1280px)" href="css/tablet.css" />
+		<link rel="stylesheet" type="text/css" media="(max-width:1023px)" href="css/small-tablet.css" />
+		<link rel="stylesheet" type="text/css" media="(max-width:575px) and (orientation:portrait)" href="css/mobile.css" />
+		<link rel="stylesheet" type="text/css" href="css/mobile-icons.css"/>
+		<link rel="stylesheet" type="text/css" href="css/social-media-icons.css"/>
+		
+		<script async src="script/main.js"></script>-->
+        <style>
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, dl, dt, dd, 
+ol, ul, li, form, table, caption, tr, th, td, article, aside, footer, header, input, select, button {
+    font-size: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 200%;
+}
+html {
+	background-color: var(--away-field-color, blue);
+}
+body {
+	margin: auto;
+	max-width: 1920px;
+}
+.flex-container {
+	display:flex;
+	align-items:center;
+	flex-flow: row wrap;
+}
+.toolbar {
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+	height: 90px;
+	background-color: white;
+	box-shadow: 0px 0px 3px 0px #888;
+	justify-content: space-between;
+	padding: 0px 50px;
+	flex-wrap: nowrap;
+	z-index:10;
+	max-width: 1920px;
+	margin: auto;
+}
+.phone-icon {
+	margin-right:8px;
+}
+/*hamburger*/
+div.mobile-menu-hamburger {
+	display: none;
+	align-items: center;
+	justify-content: center;
+	width: 60px;
+	height: 60px;
+	margin-left: 30px;
+	cursor: pointer;
+	position: relative;}
+div.mobile-menu-hamburger > span {
+	display: block;
+	width: 50%;
+	height: 4px;
+	left: 15px;
+	background-color: var(--main-color);
+	position: absolute;
+	opacity: 1;
+	transition: .35s ease-in-out;}
+div.mobile-menu-hamburger > span:nth-child(1) {
+	top: 20px;}
+div.mobile-menu-hamburger > span:nth-child(2) {
+	top: 28px;}
+div.mobile-menu-hamburger > span:nth-child(3) {
+	top: 36px;}
+div.mobile-menu-hamburger.visible > span:nth-child(1) {
+	transform: rotate(45deg);
+	top: 28px;}
+div.mobile-menu-hamburger.visible > span:nth-child(2) {
+	opacity: 0;
+	width: 0;
+	left: 30px;}
+div.mobile-menu-hamburger.visible > span:nth-child(3) {
+	transform: rotate(-45deg);
+	top: 28px;}
+/*tablet*/
+.phone-menu > li,
+.main-menu > li,
+.main-menu > li > a,
+.language-selector,
+.language-selector > li {
+	height: 32px;
+}
+
+.main-menu > li > a {
+	letter-spacing: 1px;
+	font-size: 12px;}
+.main-menu > li > a::after {
+	top: 29px;}
+a.button.menu-button,
+a.button.menu-button:hover{
+	letter-spacing: 1px;
+	font-size: 12px;
+	padding: 5px 16px;
+	height: 32px;}
+.language-selector > li {
+	padding: 5px 0px;}
+.phone-menu .submenu,
+.main-menu .submenu,
+.language-selector .submenu {
+	top: 29px;}
+@media (min-width:1024px) and (max-width:1070px){
+    a.button.menu-button {
+        display: none;}
+	.language-selector {
+		margin-left: 20px;
+		top: 1px;}
+	.language-selector::before{
+		content: "";
+		display: block;
+		position: absolute;
+		width: 4px;
+		height: 100%;
+		background-color: var(--border-gray);
+		border-radius: 2px;
+		top: 0;
+		left: -10px;
+		cursor: default;}}
+/*small-tablet*/
+div.mobile-menu-hamburger {
+	display: block;
+}
+.phone-icon {
+	height: 38px;}
+.phone-menu .submenu {
+	right: 0;}
+.responsive-menu {
+	display: block;
+	position: absolute;
+	right: 0px;
+	border-top: 3px solid var(--main-color);
+	top: 77px;
+	background-color: white;}
+.main-menu,
+.main-menu > li,
+.main-menu > li > a,
+.main-menu .submenu,
+.language-selector .submenu {
+	position: static;
+	display: block;
+    height: auto;}
+a.button.menu-button {
+	display: none;}
+.responsive-menu,
+.main-menu,
+.language-selector {
+	flex-flow: column nowrap;
+	align-items: stretch;}
+.main-menu > li > a {
+	padding: 8px 42px;
+	font-size: 14px;
+	text-align: left;
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: uppercase;
+	white-space: nowrap;
+	margin: 0;}
+.main-menu > li > a::after {
+	display: none;}
+.main-menu .submenu,
+.language-selector .submenu {
+	position: static;
+	display: block;}
+.main-menu .submenu > li,
+.main-menu .submenu > li > a,
+.language-selector .submenu > li,
+.language-selector .submenu > li > a {
+	position: static;
+	display: block;}
+
+
+
+
+
+
+
+        </style>
+	</head>
+	
+	
+	<body>
+		<!--HEADER-->
+		<header>
+			<div class="flex-container toolbar">
+				<a href="index.html"><img class="logo" src="images/logo(268x80px).webp" alt="БайдаЁЖ"/></a>
+				
+				<div class="header-menu">
+					<ul class="phone-menu">
+						<li><img class="phone-icon" src="images/phoneme_bilinear(38x38).gif" alt="phone"/>
+							<ul class="submenu">
+								<li><a href="tel:+380632382105"><span title="Lifecell" class="mobo-lifecell-16">&nbsp;+38(063)238-21-05</span></a></li>
+								<li><a href="tel:+380990218740"><span title="Vodafone" class="mobo-vodafone-16">&nbsp;+38(099)021-87-40</span></a></li>
+								<li><a href="tel:+380984997977"><span title="Киевстар" class="mobo-kyivstar-16">&nbsp;+38(098)499-79-77</span></a></li>
+								<li><a href="viber://chat?number=%2B380990218740" target="_blank"><span title="Viber" class="social-media-icon fab fa-viber"></span>&nbsp;Viber</a></li>
+								<li><a href="https://t.me/baydaezh" target="_blank"><span title="Telegram" class="social-media-icon fab fa-telegram"></span>&nbsp;Telegram</a></li>
+							</ul>
+						</li>
+					</ul>
+
+					<div class="mobile-menu-hamburger" onclick="hamburgerMenuClick()" tabindex="0"><span></span><span></span><span></span></div>
+					
+					<div class="responsive-menu">
+						<nav>
+							<ul class="main-menu">
+								<li><a class="menu-selected" href="index.html">Главная</a></li>
+								<li><a>Туры <span class="submenu-arrow fas fa-caret-down"></span></a>
+									<ul class="submenu">
+										<li><a href="html/Donets.html">Северский Донец</a></li>
+										<li><a href="html/Oskol.html">Оскол</a></li>
+										<li><a href="html/Vorskla.html">Ворскла</a></li>
+										<li><a href="html/Orell.html">Орель</a></li>
+									</ul>
+								</li>	
+								<li><a href="html/sheduler.html">График</a></li>
+								<li><a href="html/photos.html">Фото</a></li>
+								<li><a href="html/feedback.html">Отзывы</a></li>
+								<li><a href="html/blog.html">Блог</a></li>
+								<li><a href="html/faq.html">FAQ</a></li>
+								<li><a href="html/contacts.html">Контакты</a></li>
+							</ul>
+						</nav>
+						<a class="button menu-button" href="#tour-request">Хочу в поход!</a>
+						<ul class="language-selector">
+							<li><a>Рус</a>
+								<ul class="submenu">
+									<li><a href="">Рус</a></li>
+									<li><a href="">Укр</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		
+		<!--MAIN BLOCK-->
+		<main>
+			<article>
+				<!--Video block-->
+				<div class="video-container">
+					
+				</div>
+			</article>
+		</main>
+		
+
+	</body>
+</html>
